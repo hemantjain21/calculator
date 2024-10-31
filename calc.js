@@ -33,6 +33,7 @@ for (let i = 0; i <= 19; i++) {
                 screenString += btnNames[i].value;
                 screen.textContent = screenString;
             });
+
         }
         else if ("C" == btnNames[i].value) {
             btnNames[i].addEventListener("click", (e) => {
