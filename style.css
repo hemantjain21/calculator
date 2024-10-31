@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator{
+    height: 500px;
+    width: 400px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#screen{
+    height: 100px;
+    border: 2px solid lightgray;
+    margin: 5px;
+}
+
+#buttons{
+    flex-grow: 1;
+    margin: 5px;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn{
+    width: 95px;
+    flex-grow: 1;
+}
