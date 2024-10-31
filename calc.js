@@ -8,7 +8,7 @@ let buttons = document.querySelector("#buttons");
 let screen = document.querySelector("#screen");
 let btnNames = [];
 let screenString = "";
-let aString, bString, operatorPosition, operator, newScreenString, previousString, bStartingPosition;
+let operatorPosition, operator, newScreenString, previousString, bStartingPosition;
 let finalExpressionArray = [];
 let operatorArray = [];
 let splitArray = [];
@@ -16,7 +16,7 @@ let newArray = [];
 let newArrayNumber = [];
 let operatorArrayNumber = [];
 let num;
-let result = 0;
+let result;
 let number;
 let newArr = [];
 
@@ -38,6 +38,13 @@ for (let i = 0; i <= 19; i++) {
             btnNames[i].addEventListener("click", (e) => {
                 screenString = "";
                 screen.textContent = screenString;
+                result = "";
+                resultScreen.textContent = result;
+                newArray = [];
+                newArrayNumber = [];
+                splitArray = [];
+                operatorArray = [];
+                finalExpressionArray = [];
             });
         }
         else if ("DEL" == btnNames[i].value) {
@@ -53,6 +60,7 @@ for (let i = 0; i <= 19; i++) {
                 let percent = (+screenString) / 100;
                 screenString = percent;
                 screen.textContent = screenString;
+                resultScreen.textContent = screenString;
             });
         }
         else if ("/" == btnNames[i].value) {
@@ -113,7 +121,7 @@ for (let i = 0; i <= 19; i++) {
                     screenString = screenString.slice(0, -1);
                     operatorArray.pop();
                     // screen.textContent = screenString;
-                    // resultScreen.textContent = screenString;
+                    resultScreen.textContent = screenString;
                 }
                 else {
                     // code here
@@ -168,6 +176,8 @@ for (let i = 0; i <= 19; i++) {
 
                         
                     }
+
+                    resultScreen.textContent = result;
                 }
             });
         }
